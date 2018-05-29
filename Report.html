@@ -13096,7 +13096,8 @@ test_{network} = bottleneck_features['test']</code></pre>
 </code></pre>
 <p><strong>Question 5:</strong> Outline the steps you took to get to your final CNN architecture and your reasoning at each step.  Describe why you think the architecture is suitable for the current problem.</p>
 <p><strong>Answer:</strong> 
-My reasoning for using this architecture is that seemed to work reasonably well for the 'Resnet50' model. I tried with VGG19 model , but the accurecy was ~30% (which was below 60%). If it didn't perform well I would have altered it with the goal of increasing its accuracy, it ended up performing well above the 60% accuracy threshold (81%).</p>
+I selected ResNet model. I added a global average pooling layer and a dense layer with Softmax activation to classify the output into one of 133 categories. With this architecture I was able to get 81.2% accuracy. I trained the model for 40 epochs. I found losses stabilized after 4-5 epochs and I picked the model with the lowest validation loss. The reason behind selecting ResNet architecture is that it solves the vanishing gradient problem while keeping an excellent performance. This allows to have a deeper neural network.</p>
+<p>My reasoning for using this architecture is that seemed to work reasonably well for the 'Resnet50' model. I tried with VGG19 model , but the accurecy was ~30% (which was below 60%). If it didn't perform well I would have altered it with the goal of increasing its accuracy, it ended up performing well above the 60% accuracy threshold (81%).</p>
 
 </div>
 </div>
